@@ -14,7 +14,11 @@ const Home = () => {
                     <Link to='/login' className="btn btn-ghost normal-case text-xl">Login</Link>
                     <Link to='/register' className="btn btn-ghost normal-case text-xl">Register</Link>
                 </>}
-                {user && <Link onClick={logOut} to='/login' className="btn btn-ghost normal-case text-xl">LogOut</Link>}
+                {user && <>
+                    <Link to='/profile' className="btn btn-ghost normal-case text-xl">Profile</Link>
+                    <Link to='/order' className="btn btn-ghost normal-case text-xl">Order</Link>
+                </>}
+                {user && <Link onClick={logOut} to='/login' className="btn btn-ghost bg-purple-600 normal-case text-xl">LogOut</Link>}
                 {user && <span className='normal-case text-xl ms-auto me-12'>{user.email}</span>}
             </div>
         </div>
